@@ -1,3 +1,5 @@
+package BinarySearch;
+
 class Solution {
     public int findPeakElement(int[] arr) {
         int start = 0;

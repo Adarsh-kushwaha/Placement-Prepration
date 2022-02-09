@@ -1,4 +1,6 @@
-class Solution {
+package BinarySearch;
+
+class Peak_index_moubtain_array {
     public int peakIndexInMountainArray(int[] arr) {
         int start = 0;
         int end = arr.length-1;

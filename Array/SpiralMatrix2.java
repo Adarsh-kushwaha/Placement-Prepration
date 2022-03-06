@@ -1,32 +1,31 @@
 package Array;
 
-import java.security.interfaces.RSAKey;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
-class SpiralMatrix {
+public class SpiralMatrix2 {
     public static void main(String[] args) {
-        int[][] matrix = { { 1, 2, 3,10 }, { 4, 5, 6,20 }, { 7, 8, 9,30 } };
-        System.out.println(spiralOrder(matrix));
+        int n = 3;
+        System.out.println(Arrays.toString(generateMatrix(n)));
     }
 
-    static List<Integer> spiralOrder(int[][] matrix) {
-        ArrayList<Integer> list = new ArrayList<>();
-
+    static int[][] generateMatrix(int n) {
+        int[][] matrix = new int[n][n];
         int d = 0, top = 0, bottom = matrix.length - 1, left = 0, right = matrix[0].length - 1;
+        int count =0;
 
-        while (top <= bottom && left <= right) {
-            if (d == 0) {
-                for (int i = left; i <= right; i++) {
-                    list.add(matrix[top][i]);
-
+        while(top<=bottom && right>=left){
+            if(d==0){
+                for (int i = left; i <= right ; i++) {
+                    count++;
+                    matrix[top][i]= count ;
                 }
                 top++;
             }
 
             else if (d == 1) {
                 for (int i = top; i <= bottom; i++) {
-                    list.add(matrix[i][right]);
+                    count++;
+                   matrix[i][right]=count;
 
                 }
                 right--;
@@ -34,7 +33,8 @@ class SpiralMatrix {
 
             else if (d == 2) {
                 for (int i = right; i >= left; i--) {
-                    list.add(matrix[bottom][i]);
+                    count++;
+                    matrix[bottom][i]=count;
 
                 }
                 bottom--;
@@ -42,16 +42,15 @@ class SpiralMatrix {
 
             else if (d == 3) {
                 for (int i = bottom; i >= top; i--) {
-                    list.add(matrix[i][left]);
+                    count++;
+                   matrix[i][left]=count;
 
                 }
                 left++;
             }
 
             d = (d + 1) % 4;
-
         }
-
-        return list;
+        return matrix;
     }
 }

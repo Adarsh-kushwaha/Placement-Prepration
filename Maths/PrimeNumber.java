@@ -5,18 +5,18 @@ public class PrimeNumber {
         System.out.println(isPrime(0));
     }
 
-    static boolean isPrime(int n){
-        if(n<=1){
+    static boolean isPrime(int n) {
+        if (n <= 1) {
             return false;
         }
 
         int c = 2;
 
-        while(c*c<=n){
-            if(n%c==0){
+        while (c * c <= n) {
+            if (n % c == 0) {
                 return false;
             }
-            c++; 
+            c++;
         }
 
         return true;

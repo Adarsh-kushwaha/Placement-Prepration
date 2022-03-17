@@ -6,9 +6,13 @@
 
 package Sorting;
 
- class SetMismatch {
+import java.util.Arrays;
+
+class SetMismatch {
     public static void main(String[] args) {
-        
+        int [] nums = {1,2,2,3,4,5};
+        int [] ans = findErrorNums(nums);
+        System.out.println(Arrays.toString(ans));
     }
 
     static int[] findErrorNums(int[] nums) {

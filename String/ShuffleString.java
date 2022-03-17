@@ -2,7 +2,7 @@ package String;
 
 public class ShuffleString {
     public static void main(String[] args) {
-        
+       
     }
 
     static String restoreString(String s, int[] indices) {

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int[] arr = { 7, 4, 5, 9 };
+        int[] arr = { 2,3,4,6,5,1 };
         int[] ans = mergesort(arr);
         System.out.println(Arrays.toString(ans));
     }
@@ -19,6 +19,7 @@ public class MergeSort {
 
         int[] left = mergesort(Arrays.copyOfRange(arr, 0, mid));
         int[] right = mergesort(Arrays.copyOfRange(arr, mid, arr.length));
+       
 
         return merge(left, right);
     }
@@ -58,7 +59,12 @@ public class MergeSort {
 
         return mix;
     }
+
+
+    //Practicing Again
+
 }
 
 // time complexity - O(nlogn)
 // space complexity - o(n)
+

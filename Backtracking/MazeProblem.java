@@ -6,7 +6,7 @@ public class MazeProblem {
     }
 
     // finding no of ways to reach at target in a maze
-    // for explanation look at copy;
+    // for explanation look at copy
     static int count(int r, int c) {
         if (r == 1 || c == 1) {
             return 1;

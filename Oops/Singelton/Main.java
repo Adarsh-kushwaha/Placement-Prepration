@@ -1,5 +1,6 @@
 package Oops.Singelton;
 
+
 public class Main {
     public static void main(String[] args) {
         // both will refer to the same object

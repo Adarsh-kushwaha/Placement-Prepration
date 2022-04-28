@@ -11,7 +11,7 @@ public class Box {
         this.b = b;
     }
 
-    public Box(Box old) {
+     public Box(Box old) {
         this.l = old.l;
         this.h = old.h;
         this.b = old.b;

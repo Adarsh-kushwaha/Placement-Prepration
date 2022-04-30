@@ -1,4 +1,4 @@
-package Interfaces;
+package Oops.Interfaces;
 
 //you cannot implement Media here because it contain same method as Engine so for that we create seperate classes;
 public class Car implements Engine, Brake {

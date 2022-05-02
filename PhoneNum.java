@@ -1,40 +1,66 @@
-import java.util.Arrays;
-
-import javax.print.DocFlavor.STRING;
 
 public class PhoneNum {
     public static void main(String[] args) {
-        String s = "double one";
-        getPhoneNumber(s);
-
-    }
-
-    // public static int rep(String rep)
-
-    public static int check(String word) {
-        if (word == "one") {
-            return 1;
-        }
-        return -1;
+        String ans = getPhoneNumber("five one zero six triple eight nine six four");
+        System.out.println(ans);
     }
 
     public static String getPhoneNumber(String s) {
-        // Write your code here
-        String nums[] = s.split(" ");
+        String[] text = s.split(" ");
+        String phoneNum = "";
 
-        // StringBuilder phone = new StringBuilder();
-        int[] word = {};
+        for (int i = 0; i < text.length; i++) {
 
-        for (int i = 0; i < nums.length; i++) {
+            if (text[i].equals("double")) {
+                String singleNum = checkNum(text[i + 1]);
+                phoneNum = phoneNum + singleNum;
+            } else if (text[i].equals("tripple")) {
+                String singleNum = checkNum(text[i + 1]);
+                phoneNum = phoneNum + singleNum + singleNum;
+            } else {
+                String singleNum = checkNum(text[i]);
+                phoneNum = phoneNum + singleNum;
 
-            if (nums[i] == "double") {
-                int phone = check(nums[i + 1]);
-                word[i] = phone;
             }
+
         }
-       
 
-        return s;
+        return phoneNum;
+    }
 
+    public static String checkNum(String numStr) {
+        if (numStr.equals("one")) {
+            return "1";
+        }
+
+        if (numStr.equals("two")) {
+            return "2";
+        }
+        if (numStr.equals("three")) {
+            return "3";
+        }
+        if (numStr.equals("four")) {
+            return "4";
+        }
+        if (numStr.equals("five")) {
+            return "5";
+        }
+        if (numStr.equals("six")) {
+            return "6";
+        }
+        if (numStr.equals("seven")) {
+            return "7";
+        }
+        if (numStr.equals("eight")) {
+            return "8";
+        }
+        if (numStr.equals("nine")) {
+            return "9";
+        }
+        if (numStr.equals("zero")) {
+            return "0";
+        }
+
+        return "";
     }
 }

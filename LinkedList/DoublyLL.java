@@ -37,6 +37,33 @@ public class DoublyLL {
 
     }
 
+    // Insert after a random number
+
+    public Node find(int val) {
+        Node node = head;
+        while (node != null) {
+            if (node.value == val) {
+                return node;
+            }
+            node = node.next;
+        }
+
+        return null;
+    }
+
+    public void insertAfter(int After, int val) {
+        // fnding node After
+        Node p = find(After);
+        Node node = new Node(val);
+
+        node.next = p.next;
+        p.next = node;
+        node.prev = p;
+        if (node.next != null) {
+            node.next.prev = node;
+        }
+    }
+
     public void disp() {
         Node node = head;
         Node last = null;
@@ -81,6 +108,7 @@ public class DoublyLL {
         list.insertFirst(20);
         list.insertFirst(30);
         list.insertLast(5);
+        list.insertAfter(20, 69);
         list.disp();
     }
 

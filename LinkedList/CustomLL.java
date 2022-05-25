@@ -9,6 +9,8 @@ public class CustomLL {
         this.size = 0;
     }
 
+    // Insertion using recurrsion
+
     // inserting item at index
 
     public void insert(int val, int index) {
@@ -110,12 +112,12 @@ public class CustomLL {
         return val;
     }
 
-    //find the value
+    // find the value
 
-    public Node find(int val){
+    public Node find(int val) {
         Node node = head;
-        while(node != null){
-            if(node.value == val){
+        while (node != null) {
+            if (node.value == val) {
                 return node;
             }
 
@@ -156,7 +158,7 @@ public class CustomLL {
         list.insertFirst(4);
         list.insertFirst(3);
         list.disp();
-        System.out.println( list.find(4));
+        System.out.println(list.find(4));
         list.disp();
     }
 }

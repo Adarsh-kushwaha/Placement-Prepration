@@ -137,6 +137,22 @@ public class CustomLL {
         System.out.println("End");
     }
 
+    // linked list reversal - using recurrsion
+    public void reversalLL(Node node) {
+        if (node == tail) {
+            head = tail;
+            return;
+        }
+
+        // traverse till tail
+        reversalLL(node.next);
+
+        // while emptying stack reverse the linked list
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
     private class Node {
         private int value;
         private Node next;
@@ -149,6 +165,7 @@ public class CustomLL {
             this.value = value;
             this.next = next;
         }
+
 
     }
 

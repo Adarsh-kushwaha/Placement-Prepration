@@ -3,7 +3,7 @@ package BinarySearch;
 class Floor {
     public static void main(String[] args) {
         int[] nums = { 2, 3, 5, 9, 14, 16, 18 };
-        int target = 8;
+        int target = 13;
         int res = floor_pb(nums, target);
         System.out.println(res);
     }
@@ -21,11 +21,11 @@ class Floor {
             } else if (target < nums[mid]) {
                 end = mid - 1;
             } else {
-                return mid;
+                return nums[mid];
             }
         }
 
-        return end;
+        return nums[end];
     }
 
 }

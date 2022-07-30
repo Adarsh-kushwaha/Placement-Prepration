@@ -1,3 +1,5 @@
+package Sorting;
+
 class Solution {
     public int[] sortArray(int[] nums) {
         return mergeSort(0,nums.length-1,nums);

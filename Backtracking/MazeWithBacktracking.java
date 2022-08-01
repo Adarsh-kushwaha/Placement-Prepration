@@ -20,7 +20,7 @@ public class MazeWithBacktracking {
             return;
         }
 
-        // i am considering this block in my path
+        // marking false to visited path so we cannot return back to these
         maze[r][c] = false;
 
         if (r < maze.length - 1) {

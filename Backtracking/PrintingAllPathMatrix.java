@@ -48,6 +48,7 @@ public class PrintingAllPathMatrix {
             printAllPath(p + "L", maze, r, c - 1, path, step + 1);
         }
 
+        //backtracking steps and chnged boolen values
         maze[r][c] = true;
         path[r][c] = 0;
     }

@@ -14,7 +14,7 @@ public class FittestTrainee {
             }
         }
 
-        fitTrainee(fitDat);
+        fitTrainee(fitData);
 
     }
 

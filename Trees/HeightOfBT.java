@@ -27,3 +27,5 @@ public class HeightOfBT {
         return 1 + Math.max(lh, rh);
     }
 }
+
+//o(n)
